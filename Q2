@@ -1,0 +1,19 @@
+Analise as seguintes proposições a respeito do ciclo Redux.
+
+I. Criadoras de ação são objetos Javascript que transitam entre a fase dispatch e os reducers.
+
+II. Um reducer é uma função que, quando acionada, pode decidir não atualizar o estado centralizado.
+
+III. Quando implementa um reducer, o programador está automaticamente implementando um “dispatcher”.
+
+RESPOSTA
+A proposição I é falsa. Criadoras de ação são, como o nome diz, funções que criam ações. As
+ações são os objetos que transitam entre a fase de dispatch e os reducers.
+
+A proposição II é verdadeira. De acordo com o type de uma ação recebida, um reducer pode
+decidir manter a fatia de estado recebida inalterada.
+
+A proposição III é falsa. A fase dispatch nos é entregue pelo próprio redux, ela não é implementada pelo programador
+
+A resposta correta é:
+II

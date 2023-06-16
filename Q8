@@ -1,0 +1,19 @@
+Analise as seguintes proposições a respeito do ciclo de vida de um componente React definido por meio de uma classe.
+
+I. Seu construtor é chamado sempre que seu estado é atualizado.
+
+II. Seu método render é chamado sempre que seu estado é atualizado.
+
+III. Os métodos componentDidMount e componentWillUnmount executam uma única vez cada para cada componente instanciado.
+
+É correto apenas o que se afirma em
+
+RESPOSTA
+A proposição I é falsa. O construtor é chamado - como o nome sugere - somente no momento em que o componente é construído, o que ocorre uma única vez por componente.
+
+A proposição II é verdadeira. O método render se encarrega de produzir uma nova expressão JSX levando em conta os novos valores existentes no estado atualizado, o que causa a potencial atualização da tela.
+
+A proposição III é verdadeira. O método componentDidMount executa uma única vez, logo depois de o construtor terminar a sua execução e logo após o componente ser montado na árvore DOM.Sua finalidade é permitir que o programador escreva código para a obtenção de recursos necessários para a exibição do componente, de modo que isso seja possível depois de o componente já estar - ainda que parcialmente - visível para o usuário. O método componentWillUnmount executa uma única vez, o que acontece quando ele ainda vai ser desmontado da árvore DOM. Sua [nalidade é permitir que o programador escreva código que desaloca recursos eventualmente alocados antes de o componente deixar de existir.
+
+A resposta correta é:
+II e III.

@@ -1,0 +1,97 @@
+O uso do mecanismo “dotenv” traz, pelo menos, duas vantagens:
+
+- alteração de valores em função do ambiente (desenvolvimento, produção
+etc)
+- isolamento de valores do sistema de controle de versão
+
+O pacote react-dotenv, usado em aula, viabiliza o uso do mecanismo citado em aplicações React. Sabe-se que aplicações React executam puramente do lado do cliente. Diante de tais fatos, analise as seguintes proposições:
+
+I. O arquivo env.js gerado pelo react-dotenv é “baixado” pelo navegador uma vez que a aplicação seja acessada.
+
+II. À chave whitelist, que [ca no arquivo package.json, associamos o nome de uma única chave cujo valor associado é de interesse para a aplicação.
+
+III. O arquivo env.js gerado pelo react-dotenv deve ser especi[cado no arquivo .gitignore e quando isso é feito, ele deixa de ser “baixado” pelo navegador, uma vez que a aplicação seja acessada.
+
+RESPOSTA
+A proposição I é verdadeira. O arquivo env.js é incluído no arquivo index.html e o funcionamento da aplicação depende de sua existência.
+
+A proposição II é falsa. A notação é “whitelist”: [“C1”, “C2”]. Ou seja, à chave whitelist associamos uma coleção.
+
+A proposição III é falsa. Arquivos especi[cados no arquivo .gitignore deixam de fazer parte do controle de versão apenas. O arquivo env.js criado pelo react-dotenv continua sendo importado pelo arquivo index.html e, portanto, “baixado” pelo navegador.
+
+A resposta correta é:
+I
+
+ARQUIVO PACKAGE.JSON
+{
+  "name": "testessimulado",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "primeflex": "^3.3.1",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dotenv": "^0.1.3",
+    "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-dotenv && react-scripts start",
+    "build": "react-dotenv && react-scripts build",
+    "serve": "react-dotenv && serve build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "react-dotenv": {
+    "whitelist": ["PEXELS_KEY"]
+  }
+}
+
+ARQUIVO .gitignore
+See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+ dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+ testing
+/coverage
+
+ production
+/build
+
+ misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

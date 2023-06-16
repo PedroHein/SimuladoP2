@@ -1,0 +1,9 @@
+Assinale verdadeiro ou falso. Componentes controlados são aqueles que possuem múltiplos objetos para representar o seu estado.
+
+Escolha uma opção:
+
+RESPOSTA
+A proposição é falsa. Todo componente React possui um único “estado” que, por sua vez, pode
+ser composto por múltiplos pares chave/valor.
+
+A resposta correta é 'Falso'

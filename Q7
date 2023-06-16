@@ -1,0 +1,52 @@
+Considere o seguinte componente React
+
+--------IMAGEM DA QUESTÃO--------
+import React, { Component } from ‘react’
+export. default class Q7_estado extends Component {
+    state = {
+        nome: 'Joao',
+        contador: 0
+    }
+
+    render() {
+        const atvalizer = () => (
+            this. setstate({contador: this. state.contador + 1})
+        )
+        return (
+            <div>
+                <p>Olá, (this.state.nome) </p>
+                <p>Vocé já clicou (this.state.contador) vezesi</p>
+                <button>
+                    onClicks=(atualizar)>
+                        OK
+                </huttons>
+            </div>
+        )
+    }   
+}
+
+Analise as seguintes proposições.
+
+I. A cada clique, a aplicação incrementa o valor armazenado na variável contador e atualiza a tela automaticamente.
+
+II. A linha 9 substitui o estado original por outro que contém apenas achave “contador”. Isso quer dizer que, depois do primeiro clique, a variável “nome” passa a valer “undefined” e o nome “João” não é exibido na tela.
+
+III. A linha 16 pode ser reescrita  da seguinte forma, sem que isso altere o funcionamento do componente:
+
+onClick={() => atualizar}>
+
+É correto apenas o que se afirma em
+
+RESPOSTA
+A proposição I é verdadeira. O vínculo feito na linha 16 está correto. A função atualizar causa a execução da função setState. Ela, por sua vez, atualiza o estado e a tela.
+
+A proposição II é falsa. Embora a linha 9 especifique um valor apenas para a variável contador, as demais chaves são mantidas no estado. Não se trata de uma substituição do objeto inteiro, mas sim de uma atualização dos valores associados às chaves que forem especificadas.
+
+A proposição III é falsa.  O código sugerido é uma arrow function que especifica o nome da
+função atualizar mas não a coloca em execução. Falta a notação ( ) para que isso ocorra. A
+função vinculada ao evento onClick, portanto, é uma arrow function que não faz nada e devolve
+uma função. Observe que a função vinculada ao onClick é a arrow function e não a função
+devolvida por ela.
+
+A resposta correta é:
+I.

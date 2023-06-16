@@ -1,0 +1,29 @@
+Analise a segura e as proposições a seguir. 
+
+I. Sempre que chamada, a função opera sobre uma lista vazia. 
+
+II. Há casos em que ela é executada e a fatia do estado sobre a qual ela opera permanece inalterada. 
+
+III. Ela recebe uma fatia de estado e uma ação.
+
+--------IMAGEM DA QUESTÃO--------
+const historicoVesttibularReducer = (historicoVestibularAtual = [], acao) =>{
+  if (acao.type === "REALIZAR_VESTIBULAR"){
+    return [...historicoVestibularAtual, acao.payload]
+  }
+  return historicoVestibularAtual
+}
+
+É correto apenas o que se afirma em
+
+RESPOSTA
+A proposição I é falsa. A função somente opera sobre uma lista vazia caso seu primeiro parâmetro seja undefined. Dentro do ciclo Redux, ele deixa de ser unde[ned a partir da segunda chamada à função.
+
+A proposição II é verdadeira. Se a condição do if for avaliada como false, a fatia de estado
+recebida (historicoVestibularAtual) é devolvida sem alterações.
+
+A proposição III é verdadeira. Essa é a de[nição de um reducer. Seu primeiro parâmetro é a 
+fatia de estado sobre a qual operar e o segundo parâmetro é a ação que representa o que se deseja fazer com a fatia de estado.
+
+A resposta correta é:
+II e III.

@@ -1,0 +1,60 @@
+Considere a [gura e as proposições a seguir. 
+
+I. Trata-se de um componente React controlado. 
+
+II. Caso um props chamado dica não seja especificado quando o componente for utilizado, o campo textual renderizado pelo InputText exibirá “null”, sem as aspas.
+
+III. A linha 10 está incorreta já que a função setState deve receber pares chave/valor não englobados por { e }.
+
+--------IMAGEM DA QUESTÃO--------
+import React, { Component } from ‘react’
+import { InputText } from 'primereact/inputtext
+import { Button ) from 'primereact/button’
+export default class Busca extends Component {
+    state = (
+        ternoDebusca: *'
+    )
+    onTernoAlterado = (event) => {
+        console. log(event. target value)
+        this. setstate({ temoDeBusca: event. target.value })
+    )
+
+    render() (
+        return (
+            // empilhando os filhos
+            <div classhane="flex flex-column>
+                {/* icone 3 esquerda, largura maxima */)
+                <span classhane="p-1nput-icon-left w-full">
+                    <i classhane="p1 pi-search’ />
+                    <TnputText
+                        value= (this. state. ternoDeBusca)
+                        //largura maxima
+                        className="w- full”
+                        onChange={this.onTermoAlterado)
+                        placeholder={this. props.dica)
+                    />
+                </span>
+                <Button
+                    label="OK"
+                    className="p-button-outlined mt-2"
+                />
+            </div>
+        )
+    }
+}
+Busca. defaultProps = (
+    dica: ‘Digite algo que deseja ver.
+)
+
+É correto apenas o que se afirma em
+
+RESPOSTA
+A proposição I é verdadeira. O componente é controlado pois, uma vez que o usuário digite algo, aquilo que ele digitou é armazenado no estado do componente e, a seguir, atribuído ao value do mesmo campo textual.
+
+A proposição II é falsa. O valor exibido será “Digite algo que deseja ver...” graças às linhas de 35 a 37.
+
+A proposição III é falsa. A função setState deve receber um objeto Javascript e a notação correta consiste em englobar os pares chave/valor de interesse com {  e  }.
+
+A resposta correta é:
+I
+

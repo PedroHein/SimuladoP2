@@ -1,0 +1,47 @@
+Um desenvolvedor tem como missão desenvolver um componente React capaz de exibir dados de um cosmético. Cosméticos possuem
+
+um título
+duas linhas para descrição
+um rodapé
+
+Veja a sua primeira tentativa
+
+--------IMAGEM DA QUESTÃO--------
+import React, { Component } from ‘react’
+
+export default class Q1_componentes extends Component {
+    render() {
+        return (
+            <div>
+                <div>Batom</div>
+                <div>
+                    <p>Batom</p>
+                    <p>Coleção tons marcantes</p>
+                </div>
+                <div>
+                    Batons XZ - A melhor marca
+                </div>
+            </div>
+        )
+    }
+}
+        
+Analise as seguintes proposições.
+
+I. Embora possa ser aprimorado do ponto de vista de reusabilidade, o componente é válido. Ou seja, seu uso em uma aplicação não causa erros de compilação ou em tempo de execução.
+
+II. Caso utilize a notação apropriada para o contexto JSX, nada impede que o desenvolvedor especifique regras CSS ao longo da própria de[nição da função render.
+
+III. Regras CSS somente podem ser especi[cadas fora da função render e utilizadas por ela caso elas lhe sejam entregues como parâmetros (ou seja, via props).
+
+É correto apenas o que se afirma em
+
+RESPOSTA
+A proposição I é verdadeira. O componente pode ser aprimorado do ponto de vista de reusabilidade pois mostra conteúdo “chumbado” no código. O aprimoramento poderia ser obtido por meio do mecanismo conhecido como props.
+
+A proposição II é verdadeira. Veja um exemplo <div style={{color: ‘blue’}}>.
+
+A proposição III é falsa. Nada impede que uma regra CSS seja de[nida fora da função render. Veja: const regra = {color: ‘blue’}. Ela pode ser usada assim: <div style={regra}>. Além disso, a função render não recebe parâmetro algum.
+
+A resposta correta é:
+I e II.

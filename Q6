@@ -1,0 +1,27 @@
+Quando fazemos a de[nição de um componente React, desejamos que ele possua características como alto nível de reusabilidade e facilidade de manutenção. Um dos mecanismos relacionados à reusabilidade de um componente React geralmente leva o nome de “props”. A seu respeito, considere as seguintes proposições.
+
+I. Componentes React definidos por meio de classes recebem seu objeto props como um parâmetro do método render.
+
+II. Há componentes React que acessam valores associados a chave(s) disponível(is) em seu objeto props que sequer foram especificadas explicitamente em seu contexto de uso.
+
+III. Embora funções sejam cidadãs de primeira classe em Javascript, elas não podem ser passadas de componente a componente por meio do props.
+
+É correto apenas o que se afirma em
+
+RESPOSTA
+
+A proposição I é falsa. O objeto props é recebido como parâmetro do construtor.
+
+A proposição II é verdadeira. A propriedade children é criada implicitamente pelo React e o
+componente pode acessá-la com a notação “props.children”.
+
+A proposição III é falsa. Funções podem ser passadas como parâmetros e essa é uma prática
+muito comum. Veja um exemplo.
+
+const Teste = ( ) => {
+const f = () => console.log(‘teste’)
+<UmComponenteQualquer funcao=f />
+}
+
+A resposta correta é:
+II

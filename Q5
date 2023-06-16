@@ -1,0 +1,28 @@
+A figura a seguir representa um fluxo de interação com o usuário implementado por um componente React. Ele possui um campo textual (input) em que o usuário digita um valor de interesse. A função associada ao evento onChange entra em funcionamento sempre que o valor do campo textual é atualizado
+
+--------IMAGEM DA QUESTÃO--------
+1. Usuário digita algo
+2. Elemento HTML input armazena o velor digitado em sua propriedade value
+3. A função associada ao evento onChange entra em execução e atualiza o estado do componente
+4. O estado foi atualizado, portanto, a função render executa
+5. A propriedade value do elemento HTML input passa exibir o valor existente no estado do componente.
+
+Analise as seguintes proposições.
+
+I. A figura permite concluir que o componente é funcional. 
+
+II. A figura permite concluir que o componente é controlado, desde que ele não possua outros elementos de entrada de dados. 
+
+III. O quxo representado pela figura não necessariamente inclui o objeto props do componente.
+
+É correto apenas o que se a[rma em
+
+RESPOSTA
+A proposição I é falsa. O quxo pode ser vivido por componentes funcionais e não funcionais.
+
+A proposição II é verdadeira. Depois de o usuário digitar algo, aquilo que digitou fica armazenado no estado do componente (sob seu controle, daí o nome) e ele mesmo se encarrega de atribuir esse valor explicitamente ao campo value do elemento HTML.
+
+A proposição III é verdadeira. Componentes React podem ou não utilizar o objeto props. Na figura, não há menção a esse objeto.
+
+A resposta correta é:
+II e III.
